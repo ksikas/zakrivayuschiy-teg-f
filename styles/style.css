@@ -89,8 +89,7 @@
 }
 
 .filter_contrast-brightness {
-  filter: contrast(1.5);
-  filter: brightness(0.4);
+  filter: contrast(1.5) brightness(0.4);
 }
 
 .filter_blur {
