@@ -1,0 +1,29 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* шрифты */
+  --main-font: "Inter";
+  --style-font: "PressStart2P";
+  --main-font-weight: 400;
+  --title-font-weight: 700;
+  --header-logo-size: clamp(3.0625rem, calc(2.7104rem + 1.5023vw), 4.0625rem);
+  --header-title-size: clamp(0.875rem, calc(0.6769rem + 0.8451vw), 1.4375rem);
+  --main-font-size: 18px;
+  --button-font-size: 14px;
+  /* цвета */
+  --main-color: #000;
+  --bg-color: #fff;
+  --animation-contour-color: #000;
+  --animation-fill-color: red;
+  --bg-gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  /* размеры */
+  --section-width: clamp(23.438rem, calc(16.285rem + 30.516vw), 43.75rem);
+  /* отступы */
+  --article-margin: 25px;
+  --save-button-padding: 15px;
+}

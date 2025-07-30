@@ -1,0 +1,298 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+*/
+
+.page {
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--main-font-weight, 400);
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.section {
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  inline-size: var(--section-width);
+}
+
+.header {
+  font-family: var(--style-font), fantasy;
+  font-weight: var(--main-font-weight);
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  padding-block: clamp(7.5rem, calc(7.324rem + 0.751vw), 8rem);
+  margin-block: clamp(6.25rem, calc(6.206rem + 0.188vw), 6.375rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__logo {
+  font-size: var(--header-logo-size);
+  vertical-align: bottom;
+  line-height: 100%;
+}
+
+.header__title {
+  font-size: var(--header-title-size);
+  line-height: 100%;
+}
+
+.card {
+  margin-block-end: 50px;
+}
+
+.card__title {
+  font-size: var(--main-font-size);
+  font-variation-settings: "wght" var(--title-font-weight, 700);
+  line-height: 139%;
+  vertical-align: middle;
+  margin: 3px 10px;
+}
+
+.card__image-block {
+  inline-size: 100%;
+  position: relative;
+}
+
+.card__image {
+  inline-size: 100%;
+}
+
+.filter_saturate {
+  filter: saturate(1.3);
+}
+
+.filter_sepia {
+  filter: sepia(45%);
+}
+
+.filter_brightness {
+  filter: brightness(0.5);
+}
+
+.filter_contrast-brightness {
+  filter: contrast(1.5);
+  filter: brightness(0.4);
+}
+
+.filter_blur {
+  filter: blur(0.3rem);
+}
+
+.filter_grayscale {
+  filter: grayscale(0.6);
+}
+
+.filter_hue {
+  filter: hue-rotate(40deg);
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: clamp(0.813rem, calc(1.127vw + 0.548rem), 1.563rem);
+  color: var(--main-color);
+  font-family: var(--style-font);
+  font-size: var(--button-font-size);
+  text-shadow: 0 0 1px var(--bg-color);
+  mix-blend-mode: hard-light;
+  z-index: 1;
+}
+
+@supports (-webkit-text-stroke: 1px var(--bg-color)) or
+  (text-stroke: 1px var(--bg-color)) {
+  .card__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--bg-color);
+    text-stroke: 1px var(--bg-color);
+  }
+}
+
+.card__description {
+  font-size: var(--main-font-size);
+  line-height: 21px;
+  letter-spacing: 0%;
+  margin: var(--article-margin);
+}
+
+.card__description p:not(:last-of-type) {
+  margin-block-end: 27px;
+}
+
+.card__like-block {
+  display: flex;
+  justify-content: right;
+  margin-inline-end: var(--article-margin);
+  margin-block-end: var(--article-margin);
+  cursor: pointer;
+  block-size: 38px;
+  gap: 12px;
+}
+
+.card__icon-button {
+  border: none;
+  background-color: var(--bg-color);
+}
+
+.button {
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color);
+  translate: -100%;
+  transition: translate 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  translate: 0%;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--main-color);
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 100%;
+  text-align: center;
+}
+
+.button__text {
+  color: #fff;
+  font-family: var(--style-font), fantasy;
+  font-weight: var(--main-font-weight);
+  font-style: Regular;
+  font-size: var(--button-font-size);
+  line-height: 90%;
+  letter-spacing: 0%;
+  position: relative;
+  mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--main-color);
+}
+
+.save_button-block {
+  display: flex;
+  background-color: inherit;
+  border: none;
+  justify-content: center;
+}
+
+.save_button {
+  padding-block: var(--save-button-padding);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  inline-size: clamp(19.125rem, calc(2.723vw + 18.487rem), 20.938rem);
+}
+
+.save_button-svg {
+  inline-size: clamp(1.75rem, calc(-0.657vw + 1.904rem), 1.313rem);
+  block-size: clamp(1.75rem, calc(-0.657vw + 1.904rem), 1.313rem);
+  mix-blend-mode: difference;
+  color: #fff;
+  position: relative;
+}
+
+.popup {
+  box-sizing: border-box;
+  display: flex;
+  padding-block: 30px;
+  padding-inline: 30px;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  inline-size: 353px;
+}
+
+.popup:not([open]) {
+  display: none;
+}
+
+.floppy_block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  block-size: 63px;
+  inline-size: 100%;
+}
+
+.popup_svg {
+  inline-size: 39px;
+  block-size: 39px;
+  align-self: center;
+}
+
+.popup_text {
+  inline-size: clamp(12.375rem, calc(3.38vw + 11.583rem), 14.625rem);
+  font-family: var(--style-font), fantasy;
+  font-weight: var(--main-font-weight);
+  font-style: Regular;
+  font-size: var(--button-font-size);
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.popup_ok_button {
+  block-size: 38px;
+  inline-size: 100%;
+}
+
+.popup::backdrop {
+  background: var(--main-color);
+  opacity: 75%;
+}
+
+@media (width <= 375px) {
+  .save_button {
+    flex-direction: column;
+  }
+
+  .popup {
+    padding-inline: 40px;
+    inline-size: 100%;
+  }
+}
