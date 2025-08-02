@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: "wght" var(--main-font-weight, 400);
+  font-variation-settings: "wght" var(--main-font-weight, 410);
   background-color: var(--bg-color);
   background-image: var(--bg-gradient);
   background-size: cover;
@@ -33,7 +33,7 @@
 
 .header {
   font-family: var(--style-font), fantasy;
-  font-weight: var(--main-font-weight);
+  font-weight: var(--main-font-weight-style);
   letter-spacing: 0%;
   text-transform: uppercase;
   padding-block: clamp(7.5rem, calc(7.324rem + 0.751vw), 8rem);
@@ -61,7 +61,7 @@
 
 .card__title {
   font-size: var(--main-font-size);
-  font-variation-settings: "wght" var(--title-font-weight, 700);
+  font-variation-settings: "wght" var(--title-font-weight, 715);
   line-height: 139%;
   vertical-align: middle;
   margin: 3px 10px;
@@ -109,7 +109,8 @@
   top: 25px;
   right: clamp(0.813rem, calc(1.127vw + 0.548rem), 1.563rem);
   color: var(--main-color);
-  font-family: var(--style-font);
+  font-family: var(--style-font), fantasy;
+  font-weight: var(--main-font-weight-style);
   font-size: var(--button-font-size);
   text-shadow: 0 0 1px var(--bg-color);
   mix-blend-mode: hard-light;
@@ -190,7 +191,7 @@
 .button__text {
   color: #fff;
   font-family: var(--style-font), fantasy;
-  font-weight: var(--main-font-weight);
+  font-weight: var(--main-font-weight-style);
   font-style: Regular;
   font-size: var(--button-font-size);
   line-height: 90%;
@@ -268,7 +269,7 @@
 .popup_text {
   inline-size: clamp(12.375rem, calc(3.38vw + 11.583rem), 14.625rem);
   font-family: var(--style-font), fantasy;
-  font-weight: var(--main-font-weight);
+  font-weight: var(--main-font-weight-style);
   font-style: Regular;
   font-size: var(--button-font-size);
   line-height: 150%;
