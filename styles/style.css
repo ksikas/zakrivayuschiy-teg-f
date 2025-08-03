@@ -150,6 +150,7 @@
 .card__icon-button {
   border: none;
   background-color: var(--bg-color);
+  transition: border 0.3s ease;
 }
 
 .button {
@@ -189,7 +190,7 @@
 }
 
 .button__text {
-  color: #fff;
+  color: var(--bg-color);
   font-family: var(--style-font), fantasy;
   font-weight: var(--main-font-weight-style);
   font-style: Regular;
@@ -198,10 +199,6 @@
   letter-spacing: 0%;
   position: relative;
   mix-blend-mode: difference;
-}
-
-.card__icon-button {
-  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -232,7 +229,7 @@
   inline-size: clamp(1.75rem, calc(-0.657vw + 1.904rem), 1.313rem);
   block-size: clamp(1.75rem, calc(-0.657vw + 1.904rem), 1.313rem);
   mix-blend-mode: difference;
-  color: #fff;
+  color: var(--bg-color);
   position: relative;
 }
 
